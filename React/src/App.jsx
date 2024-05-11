@@ -1,11 +1,18 @@
 import "./App.css";
 
 function App() {
-  const userName = ''
+  const items = [
+    'tanvir',
+    'sadia',
+    'maymuna',
+    'humaira',
+    'ayesha'
+  ]
   return (
     <>
-      <h1>Hello World!</h1>
-      {userName && <h1>{userName}</h1> }
+      <h1 style={{backgroundColor: 'red',fontSize:'25px'}}>Hello World!</h1>
+      {items}
+      {items.map(item => <li key={item}>{item}</li>)}
     </>
   );
 }
