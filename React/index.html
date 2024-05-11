@@ -8,6 +8,12 @@
   </head>
   <body>
     <div id="root"></div>
+    <input type="text" oninput="handleInput()">
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const handleInput = () => {
+        console.log('input trigger')
+      }
+    </script>
   </body>
 </html>

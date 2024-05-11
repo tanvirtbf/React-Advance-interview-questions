@@ -1,19 +1,14 @@
-import { useState } from "react";
 import "./App.css";
-import Button from "./components/Button";
 
 function App() {
-  const [color, setColor] = useState("red");
-
-
-
-
+  const handleInput = (e) => {
+    console.log(e.target.value)
+  }
   return (
     <>
-      <Button color={color} />
-      <button onClick={() => setColor('green')}>Change Background Color</button>
+      <input type="text" onInput={handleInput} />
     </>
-  );
+  )
 }
 
 export default App;
