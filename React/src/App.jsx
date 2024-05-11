@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <h1>Hello World!</h1>
-      {userName? <h1>{userName}</h1> : null}
+      {userName && <h1>{userName}</h1> }
     </>
   );
 }
