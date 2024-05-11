@@ -1,29 +1,22 @@
+import { useState } from "react";
 import "./App.css";
-// import { Profile as UserProfile } from "./components/Profile"; // Named Export 
-import UserProfile from './components/Profile'
-
+import Button from "./components/Button";
 
 function App() {
-  const tanvirObj = {
-    name: 'Tanvir Ahmed',
-    status: 'Play1'
-  }
-  const sadiaObj = {
-    name: 'Sadia Ahmed',
-    status: 'Play2'
-  }
-  const maymunaObj = {
-    name: 'Maymuna Ahmed',
-    status: 'Play3'
-  }
+  const [color, setColor] = useState("red");
+
+  const changeColor = (value) => {
+    if (color === "green") {
+      setColor("red");
+    } else {
+      setColor(value);
+    }
+  };
+
   return (
     <>
-      <h1>Hello World</h1>
-      <UserProfile {...tanvirObj}>
-        <h1>This is Children</h1>
-      </UserProfile>
-      <UserProfile {...sadiaObj}/>
-      <UserProfile {...maymunaObj}/>
+      <h1 style={{ backgroundColor: color }}>Hello World</h1>
+      <Button changeColor={changeColor} />
     </>
   );
 }
