@@ -1,41 +1,34 @@
 import { useState } from "react";
 import "./App.css";
 
-function App() {
-
-  let formObj = {}
-  const [data,setData] = useState([])
-
-
+const App = () => {
+  let [formObj,setFormObj] = useState({})
   const handleSubmit = (e) => {
     e.preventDefault();
-    setData([
-      ...data,
-      formObj
-    ])
-  };
-
-  const handleInput = (e) => {
-    formObj = {
-      ...formObj,
-      [e.target.name] : e.target.value
-    }
     console.log(formObj)
   }
+  const handleInput = (e) => {
+    // setFormObj({
+    //   ...formObj,
+    //   [e.target.name] : e.target.value
+    // })
+    setFormObj((prevObj) => ({...prevObj, [e.target.name] : e.target.value}))
+  };
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="firstName" onInput={handleInput}/>
-        <input type="text" name="lastName" onInput={handleInput}/>
+        <input type="text" name="firstName" onInput={handleInput} />
+        <input type="text" name="lastName" onInput={handleInput} />
+        <input type="text" name="address" onInput={handleInput} />
         <div>
           <button type="submit">Submit</button>
         </div>
       </form>
       <div>
-        {data.map((item,i) => <li key={i}>{item.firstName} and {item.lastName}</li> )}
+        <li>{formObj.firstName}</li>
       </div>
     </>
   );
-}
+};
 
 export default App;
