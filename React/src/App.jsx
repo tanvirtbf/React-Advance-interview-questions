@@ -1,20 +1,56 @@
-import { useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const [mousePos, setMousePos] = useState({x:0, y:0})
-  const [width,setWidth] = useState(100)
-  const [height,setHeight] = useState(100)
-
-  document.addEventListener("mousemove", (data) => {
-    setMousePos({x: data.clientX, y:data.clientY})
-    setWidth(mousePos.x)
-    setHeight(mousePos.y)
-  })
   return (
     <>
-      <div> X - {mousePos.x}, Y - {mousePos.y} </div>
-      <img src="https://cdn.beautybooth.com.bd/uploads/all/2FK8ylB5lJrDP9PnIGzensEaeaDcvT7jAD0ZGLxH.jpg" alt="" style={{width:`${width}px`,height:`${height}px`}} />
+      <div className="main">
+        <h1>My name is Tanvir</h1>
+        <h4>I am a Developer</h4>
+        <p>Here is my skill : </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>React</li>
+          <li>C++</li>
+        </ul>
+      </div>
+      <div className="main">
+        <h1>My name is Sabbir</h1>
+        <h4>I am a Developer</h4>
+        <p>Here is my skill : </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>React</li>
+          <li>C++</li>
+        </ul>
+      </div>
+      <div className="main">
+        <h1>My name is Rifat</h1>
+        <h4>I am a Developer</h4>
+        <p>Here is my skill : </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>React</li>
+          <li>C++</li>
+        </ul>
+      </div>
+      <div className="main">
+        <h1>My name is Riduan</h1>
+        <h4>I am a Developer</h4>
+        <p>Here is my skill : </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>React</li>
+          <li>C++</li>
+        </ul>
+      </div>
     </>
   );
 };
