@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 function ModalComp({ title, description, isModalOpen, closeModal }) {
 
+  const modalRef = useRef(null)
+
   const handleClickOutside = (e) => {
-    console.log(e.target)
+    if(modalRef.current && !modalRef.current.contains(e.target)){
+      console.log(e.target)
+      closeModal()
+    }
   }
 
   useEffect(() => {
-    document.addEventListener("click",handleClickOutside)
+    document.addEventListener("click",handleClickOutside,true)
 
     return ()=> {
       document.removeEventListener("click",handleClickOutside)
@@ -17,7 +22,7 @@ function ModalComp({ title, description, isModalOpen, closeModal }) {
 
   if (!isModalOpen) return null;
   return (
-    <div className="modal">
+    <div className="modal" ref={modalRef}>
       <h2>{title}</h2>
       <hr />
       <p>{description}</p>
