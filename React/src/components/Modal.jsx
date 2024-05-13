@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 
 function ModalComp({ title, description, isModalOpen, closeModal }) {
-  if(!isModalOpen) return null
+  if (!isModalOpen) return null;
   return (
     <div className="modal">
       <h2>{title}</h2>
@@ -23,12 +24,17 @@ const Modal = () => {
   };
   return (
     <div>
-      <ModalComp
-        isModalOpen={isModalOpen}
-        closeModal={closeModal}
-        title={"This is Awesome Title"}
-        description={"This is Awesome Description"}
-      />
+      {
+        isModalOpen && createPortal(
+          <ModalComp
+            isModalOpen={isModalOpen}
+            closeModal={closeModal}
+            title={"This is Awesome Title"}
+            description={"This is Awesome Description"}
+          />,
+          document.getElementById("modals")
+        )
+      }
       <button onClick={openModal}>Open Modal</button>
     </div>
   );
