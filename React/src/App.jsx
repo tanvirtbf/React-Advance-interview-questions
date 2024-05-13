@@ -1,9 +1,9 @@
-import React from 'react'
+import InputRef from './components/InputRef'
 
 const App = () => {
   return (
     <div>
-      hello
+      <InputRef />
     </div>
   )
 }
