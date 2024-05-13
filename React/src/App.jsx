@@ -1,18 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
-import DestroyCom from "./components/DestroyCom";
-
 
 const App = () => {
+  const [count, setCount] = useState(0);
 
-  const [hide,setHide] = useState(true)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(prevState => prevState+1);
+    },1000);
 
-  return (
-    <>
-      {hide ? <DestroyCom /> : null}
-      <button onClick={() => setHide(!hide)}>Hide or Show</button>
-    </>
-  );
+    return ()=>{
+      clearInterval(interval)
+    }
+  }, []);
+
+  return <>{count}</>;
 };
 
 export default App;

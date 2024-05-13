@@ -11,11 +11,13 @@ const DestroyCom = () => {
     document.addEventListener("mousemove", handleMove);
 
     return () => {
+
       // document.removeEventListener("mousemove", (data) => {
       //   setMousePos({ x: data.clientX, y: data.clientY });
       // });  this is not currect because same function pointer needed
 
       document.removeEventListener("mousemove", handleMove)
+      
     };
   }, []);
 
