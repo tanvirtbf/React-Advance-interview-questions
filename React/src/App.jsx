@@ -1,11 +1,16 @@
+import { useState } from "react";
 import "./App.css";
-import Destroy from "./components/destroy";
+import DestroyCom from "./components/DestroyCom";
+
 
 const App = () => {
 
+  const [hide,setHide] = useState(true)
+
   return (
     <>
-      <Destroy />
+      {hide ? <DestroyCom /> : null}
+      <button onClick={() => setHide(!hide)}>Hide or Show</button>
     </>
   );
 };
