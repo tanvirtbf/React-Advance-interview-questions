@@ -4,6 +4,20 @@
   padding: 2rem;
   text-align: center;
 }
+
+.modal{
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  position: absolute;
+  top:0;
+  left: 0;
+  transform: translate(120%,30%);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
