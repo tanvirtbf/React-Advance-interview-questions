@@ -1,10 +1,10 @@
 import './App.css'
-import DuplicateModal from './components/DuplicateModal'
+import UseMemo from './components/UseMemo'
 
 const App = () => {
   return (
     <div>
-      <DuplicateModal />
+      <UseMemo />
     </div>
   )
 }
