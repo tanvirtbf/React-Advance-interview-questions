@@ -47,8 +47,8 @@ const Modal = () => {
           <ModalComp
             isModalOpen={isModalOpen}
             closeModal={closeModal}
-            title={"This is Awesome Title"}
-            description={"This is Awesome Description"}
+            title={"This is Title Field"}
+            description={"This is Description Field"}
           />,
           document.getElementById("modals")
         )
