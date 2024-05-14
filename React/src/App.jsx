@@ -1,10 +1,10 @@
 import './App.css'
-import UseMemo from './components/UseMemo'
+import UseMemo2 from './components/UseMemo2'
 
 const App = () => {
   return (
     <div>
-      <UseMemo />
+      <UseMemo2 />
     </div>
   )
 }
