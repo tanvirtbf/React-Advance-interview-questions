@@ -1,23 +1,36 @@
-import { useState } from 'react'
+import { useMemo, useState } from "react";
 
 const UseMemo = () => {
-  const [name,setName] = useState("")
+  const [name, setName] = useState("");
+  const [num, setNum] = useState("");
 
-  const sumOfNumbers = () => {
-    console.log('calculating')
-    let num = 10000000
-    let val = 0
-    for(let i = 1; i<=num; i++){
-      val += i
+  const sumOfNumbers = useMemo(() => {
+    console.log("calculating");
+    let val = 0;
+    for (let i = 1; i <= num; i++) {
+      val += i;
     }
-    return val
-  }
+    return val;
+  },[num]);
   return (
     <div>
-      <input type="text" value={name} onChange={e=>setName(e.target.value)} placeholder='Type Your Name' />
-      <h3>sum of natural nos - {sumOfNumbers()} </h3>
-    </div>
-  )
-}
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Type Your Name"
+      />
+      <h3>sum of natural nos - {sumOfNumbers} </h3>
 
-export default UseMemo
+      <input
+        type="text"
+        value={num}
+        onChange={(e) => setNum(e.target.value)}
+        placeholder="Type a Number"
+      />
+      <h3>sum of natural nos - {sumOfNumbers} </h3>
+    </div>
+  );
+};
+
+export default UseMemo;
