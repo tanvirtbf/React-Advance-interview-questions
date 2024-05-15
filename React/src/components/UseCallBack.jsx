@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import ExpensiveComp from './ExpensiveComp'
 
 const samplePosts = [
@@ -20,9 +20,13 @@ const UseCallBack = () => {
     ])
   },[])
 
+  const ExpensivePostMemo = useMemo(()=>{
+    return <ExpensiveComp posts={posts} addPost={addPost}/>
+  },[posts,addPost])
+
   return (
     <div>
-      <ExpensiveComp posts={posts} addPost={addPost}/>
+      {ExpensivePostMemo}
       <button onClick={()=> setCount(count+1)}>{count}</button>
     </div>
   )
