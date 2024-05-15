@@ -1,12 +1,12 @@
-import './App.css'
-import UseMemo2 from './components/UseMemo2'
+import "./App.css";
+import UseCallBack from "./components/UseCallBack";
 
 const App = () => {
   return (
     <div>
-      <UseMemo2 />
+      <UseCallBack />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
