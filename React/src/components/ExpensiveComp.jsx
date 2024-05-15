@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{memo} from 'react'
 
 const ExpensiveComp = ({posts}) => {
   console.log('Expensive component rendered')
@@ -9,4 +9,4 @@ const ExpensiveComp = ({posts}) => {
   )
 }
 
-export default ExpensiveComp
+export default memo(ExpensiveComp)
