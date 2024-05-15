@@ -1,4 +1,4 @@
-import React,{memo} from 'react'
+import React, { memo } from 'react'
 
 const ExpensiveComp = ({posts,addPost}) => {
   console.log('Expensive component rendered')
