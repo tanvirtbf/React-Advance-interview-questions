@@ -1,5 +1,5 @@
 import "./App.css";
-import UseCallBack from "./components/UseCallBack";
+import TableComponent from "./components/TableComponent";
 
 const App = () => {
 
@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <div>
-      <UseCallBack />
+      <TableComponent data={productData} />
     </div>
   );
 };
