@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react';
 import ExpensiveComp from './ExpensiveComp';
 
 const samplePosts = [
@@ -8,8 +8,6 @@ const samplePosts = [
   { id: 4, title: "Hello, I am Riduan" },
   { id: 5, title: "Hello, I am Mustak" },
 ];
-
-
 
 const UseCallBack = () => {
   const [posts,setPosts] = useState(samplePosts)
