@@ -29,6 +29,7 @@ const App = () => {
   return (
     <div>
       <TableComponent data={productData} />
+      <TableComponent data={employeeData} />
     </div>
   );
 };
