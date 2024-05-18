@@ -18,3 +18,12 @@ th{
   background-color: #3d3d3d;
   color: white;
 }
+.btnCom{
+  display: flex;
+  gap:20px;
+  font-size: 30px;
+}
+.btnCom button{
+  padding: 0 20px;
+  font-size: 30px;
+}
