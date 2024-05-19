@@ -1,17 +1,17 @@
-import React from 'react'
+import useCounting from "../../hook/useCounting";
 
 const ComponentB = () => {
+  const { count, increment, decrement } = useCounting(0);
   return (
     <div>
       <h1>Component B</h1>
       <div className="btnCom">
-        <button>+</button>
-        <p>0</p>
-        <button>-</button>
+        <button onClick={() => increment(2)}>+</button>
+        <p>{count}</p>
+        <button onClick={() => decrement(2)}>-</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ComponentB
-
+export default ComponentB;
