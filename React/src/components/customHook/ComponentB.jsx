@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from 'react'
 
 const ComponentB = () => {
-  const [count, setCount] = useState(0);
   return (
     <div>
       <h1>Component B</h1>
       <div className="btnCom">
-        <button onClick={() => setCount(count + 2)}>+</button>
-        <p>{count}</p>
-        <button onClick={() => setCount(count - 2)}>-</button>
+        <button>+</button>
+        <p>0</p>
+        <button>-</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ComponentB;
+export default ComponentB
+
