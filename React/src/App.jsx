@@ -1,6 +1,7 @@
 import "./App.css";
-import ComponentA from "./components/customHook/ComponentA";
-import ComponentB from "./components/customHook/ComponentB";
+import ComponentA from "./components/customhooks/ComponentA";
+import ComponentB from "./components/customhooks/ComponentB";
+
 
 const App = () => {
 
