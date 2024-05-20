@@ -1,14 +1,15 @@
-import useCounting from "../../hooks/UseCounting";
+
+import useLocalStorage from "../../hooks/UseLocalStorage";
 
 const ComponentA = () => {
-  const { count, increment, decrement } = useCounting(0);
+  const {val,setValue} = useLocalStorage("count",0)
   return (
     <div>
       <h1>Component A</h1>
       <div className="btnCom">
-        <button onClick={() => increment(1)}>+</button>
-        <p>{count}</p>
-        <button onClick={() => decrement(1)}>-</button>
+        <button onClick={() => setValue(val + 1)}>+</button>
+        <p>{val}</p>
+        <button onClick={() => setValue(val - 1)}>-</button>
       </div>
     </div>
   );

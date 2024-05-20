@@ -1,15 +1,14 @@
-import React from "react";
-import useCounting from "../../hooks/UseCounting";
+import useLocalStorage from "../../hooks/UseLocalStorage";
 
 const ComponentB = () => {
-  const {count, increment, decrement} = useCounting(0)
+  const { val, setValue } = useLocalStorage("countB", 0);
   return (
     <div>
       <h1>Component B</h1>
       <div className="btnCom">
-        <button onClick={()=> increment(2)}>+</button>
-        <p>{count}</p>
-        <button onClick={()=> decrement(2)}>-</button>
+        <button onClick={() => setValue(val + 2)}>+</button>
+        <p>{val}</p>
+        <button onClick={() => setValue(val - 2)}>-</button>
       </div>
     </div>
   );
