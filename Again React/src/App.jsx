@@ -1,15 +1,27 @@
 import "./App.css";
 
 function App() {
-  const handleInput = (e,text) => {
-    console.log(e)
-    console.log(text)
+  let formObj = {}
+  const handleInput = (e) => {
     console.log("Handle Input Called")
+    formObj = {
+      ...formObj,
+      [e.target.name]:e.target.value
+    }
+    console.log(formObj)
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('submitted..')
   }
   return (
     <>
       <h2>Event Handling</h2>
-      <input type="text" onInput={(e)=>handleInput(e,"hello")} />
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="firstName" onInput={handleInput} />
+        <input type="text" name="lastName" onInput={handleInput} />
+        <button type="submit">Click</button>
+      </form>
     </>
   )
 }
