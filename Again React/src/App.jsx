@@ -1,29 +1,22 @@
 import "./App.css";
 
 function App() {
-  let formObj = {}
-  const handleInput = (e) => {
-    console.log("Handle Input Called")
-    formObj = {
-      ...formObj,
-      [e.target.name]:e.target.value
-    }
-    console.log(formObj)
+  const handleProductClick = () => {
+    console.log("Navigating to Product detail page")
   }
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('submitted..')
+  const handleCart = (e) => {
+    e.stopPropagation();
+    console.log("Item added in cart")
   }
   return (
     <>
       <h2>Event Handling</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="firstName" onInput={handleInput} />
-        <input type="text" name="lastName" onInput={handleInput} />
-        <button type="submit">Click</button>
-      </form>
+      <div onClick={handleProductClick} style={{padding:'20px',border:'1px solid black'}}>
+        I am a Product Cart 
+        <button onClick={handleCart}>Add to Cart</button>
+      </div>
     </>
-  )
+  );
 }
 
 export default App;
