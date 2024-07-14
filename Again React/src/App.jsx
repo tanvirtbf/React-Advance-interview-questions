@@ -1,26 +1,16 @@
 import "./App.css";
-import { Fragment } from "react";
-import Profiles  from "./components/Profile"; 
+import { Fragment, useState } from "react";
+import Button from "./components/Button";
 
 function App() {
-
-  const tanvir = {
-    name:"Tanvir",
-    status:"Coder"
+  const [color,setColor] = useState("orange")
+  const changeColor = (myColor) => {
+    setColor(myColor)
   }
-  const sadia = {
-    name:"Sadia",
-    status:"House Maker"
-  }
-
   return (
     <Fragment>
-      <Profiles {...tanvir} >
-        <h1>This is a Profile</h1>
-      </Profiles>
-      <Profiles name={sadia.name} status={sadia.status}>
-        <h1>This is a Second Profile</h1>
-      </Profiles>
+      <div style={{backgroundColor:color}}>Change My Color</div>
+      <Button changeColor={changeColor} />
     </Fragment>
   );
 }
