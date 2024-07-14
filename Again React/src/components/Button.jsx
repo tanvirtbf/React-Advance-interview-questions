@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Button = ({changeColor}) => {
+const Button = ({color}) => {
+  const [num,setNum] = useState(0)
+  console.log("btn rendered")
   return (
-    <button onClick={()=> changeColor("green")}>
-      Button
+    <button style={{backgroundColor:color}} onClick={()=> setNum(num+1)}>
+      Button {num}
     </button>
   )
 }

@@ -1,18 +1,16 @@
 import "./App.css";
-import { Fragment, useState } from "react";
-import Button from "./components/Button";
 
 function App() {
-  const [color,setColor] = useState("orange")
-  const changeColor = (myColor) => {
-    setColor(myColor)
+  const handleInput = (text) => {
+    console.log(text)
+    console.log("Handle Input Called")
   }
   return (
-    <Fragment>
-      <div style={{backgroundColor:color}}>Change My Color</div>
-      <Button changeColor={changeColor} />
-    </Fragment>
-  );
+    <>
+      <h2>Event Handling</h2>
+      <input type="text" onInput={()=>handleInput("hello")} />
+    </>
+  )
 }
 
 export default App;
