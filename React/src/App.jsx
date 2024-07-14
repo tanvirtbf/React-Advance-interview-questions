@@ -2,7 +2,6 @@ import "./App.css";
 import ComponentA from "./components/customhooks/ComponentA";
 import ComponentB from "./components/customhooks/ComponentB";
 
-
 const App = () => {
 
   return (
