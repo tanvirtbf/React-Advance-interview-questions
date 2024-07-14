@@ -8,11 +8,12 @@
   </head>
   <body>
     <div id="root"></div>
-    <input type="text" placeholder="html file" oninput="handleInput()">
+    <input type="text" placeholder="html file" oninput="handleInput(event)">
     <script type="module" src="/src/main.jsx"></script>
 
     <script>
-      const handleInput = () =>  {
+      const handleInput = (e) =>  {
+        console.log(e)
         console.log("Handled Called..")
       }
     </script>
