@@ -1,20 +1,17 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const handleProductClick = () => {
-    console.log("Navigating to Product detail page")
-  }
-  const handleCart = (e) => {
-    e.stopPropagation();
-    console.log("Item added in cart")
+  const [state,setState] = useState(0)
+  const click = () => {
+    setState((prevState)=>prevState+1)
+    setState((prevState)=>prevState+1)
+    setState((prevState)=>prevState+1)
   }
   return (
     <>
-      <h2>Event Handling</h2>
-      <div onClick={handleProductClick} style={{padding:'20px',border:'1px solid black'}}>
-        I am a Product Cart 
-        <button onClick={handleCart}>Add to Cart</button>
-      </div>
+      <h1>Hello World!</h1>
+      <button onClick={click}>Click me {state}</button>
     </>
   );
 }
