@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
 import "./App.css";
+import Example1 from "./components/Example1";
 
 
 function App() {
-  const [count,setCount] = useState(0)
-  useEffect(()=>{
-    const interval = setInterval(()=>{
-      setCount(count+1)
-    },1000)
-    return ()=>{
-      clearInterval(interval)
-    }
-  },[count])
   return (
     <>
-      <h1>{count}</h1>
+      <Example1 />
     </>
   );
 }
