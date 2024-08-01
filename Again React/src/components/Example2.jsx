@@ -9,7 +9,7 @@ const Example2 = () => {
     return ()=>{
       clearInterval(timerId)
     }
-  },[])
+  },[count])
   return (
     <div>
       {count}
