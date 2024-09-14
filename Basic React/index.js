@@ -32,6 +32,10 @@ rightBtn.addEventListener('click',()=>{
 
 
 
+// 3 Primary Reasons to learn React -
+// 1. Declarative Programming
+// 2. Component Architecture
+// 3. Single Page Application
 
 
 
