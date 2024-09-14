@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 section{
@@ -16,10 +16,12 @@ section{
   gap: 50px;
 }
 
-button img{
-  width: 40px;
-  padding: 10px;
+img{
+  width: 100%
 }
+
 button{
+  width: 50px;
+  padding: 10px;
   cursor: pointer;
 }
