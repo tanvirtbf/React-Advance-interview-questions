@@ -10,8 +10,47 @@ const h1 = {
   },
 };
 
+const h2 = {
+  $$typeof: Symbol.for('react.element'),
+  type: "h2",
+  ref: null,
+  props: {
+    className: "heading2",
+    children: [
+      {
+        $$typeof: Symbol.for('react.element'),
+        type: "b",
+        ref: null,
+        props: {
+          className: "boldText",
+          children: "Hello bold tag",
+        },
+      },
+      {
+        $$typeof: Symbol.for('react.element'),
+        type: "i",
+        ref: null,
+        props: {
+          className: "iTag",
+          children: [
+            {
+              $$typeof: Symbol.for('react.element'),
+              type: "span",
+              ref: null,
+              props: {
+                className: "spanText",
+                children: "Hello World",
+              },
+            }
+          ],
+        },
+      }
+    ],
+  },
+}
+
 const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(h1);
+root.render(h2);
 
 
 
