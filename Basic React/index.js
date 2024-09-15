@@ -140,14 +140,24 @@
 
 const container = React.createElement('div', {className:'container'},
   [
-    React.createElement('h2',{key:1, className:'imageText'},'Image'),
-    React.createElement('img',{key:2, className: 'image', src:'./images/DSC_0061.JPG', alt:'images'}),
-    React.createElement('p',{key:3, className:'para'},'This is Me')
+    React.createElement('section',{key: 1, className: 'section1'},
+    [
+      React.createElement('h2',{key:1, className:'imageText'},'Image'),
+      React.createElement('img',{key:2, className: 'image', src:'./images/DSC_0061.JPG', alt:'images'}),
+      React.createElement('p',{key:3, className:'para',style:{fontSize:'20px'}},'This is Me')
+    ]),
+    React.createElement('section',{key:2, className: 'section2'},
+    [
+      React.createElement('h2',{key:1, className:'imageText'},'Image'),
+      React.createElement('img',{key:2, className: 'image', src:'./images/DSC_0061.JPG', alt:'images', style: {width: '100px'}}),
+      React.createElement('p',{key:3, className:'para',style:{fontSize:'25px'}},'This is Me')
+    ])
   ]
 )
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 root.render(container)
+
 
 
 
