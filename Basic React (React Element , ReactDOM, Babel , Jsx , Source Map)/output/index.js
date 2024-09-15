@@ -233,3 +233,4 @@ const container = /*#__PURE__*/React.createElement("div", {
 console.log(container);
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 root.render(container);
+//# sourceMappingURL=index.js.map
