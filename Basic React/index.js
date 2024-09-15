@@ -1,15 +1,17 @@
+// const h1 = React.createElement('h1',{className:'heading'},'Hello World')
 
-const h1 = React.createElement('h1',{className:'heading'},'Hello World')
+const h1 = {
+  $$typeof: Symbol.for('react.element'),
+  type: "h1",
+  ref: null,
+  props: {
+    className: "heading",
+    children: "Hello World",
+  },
+};
 
-console.log(h1)
-
-const root = ReactDOM.createRoot(document.querySelector('#root'))
-
-console.log(root)
-
-root.render(h1)
-
-
+const root = ReactDOM.createRoot(document.querySelector("#root"));
+root.render(h1);
 
 
 
@@ -67,13 +69,3 @@ root.render(h1)
 // const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 // root.render(section)
-
-
-
-
-
-
-
-
-
-
