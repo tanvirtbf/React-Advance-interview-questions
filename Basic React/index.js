@@ -192,3 +192,17 @@
 // Babel start 
 // html er moto dekhte jei code gula react component e use hoy egula ke React element e convert korar jonno use hoy Babel . 
 // tar mane jsx code ke react element e convert kore babel 
+// new javascript ke old javascript e convert korte pare 
+
+// *************Important Notes**************
+// prothomoto amra react e jei element gula create kori seta React element hishebe create hoy , then oita ReactDOM er maddhome browser dom hishebe convert hoye webpage e show hoy . karon webpage react element bujhe na , webpage only dom element bujhe . ai kaj ta korar jonno ReactDOM age ekta container create kore jar name usually root deya hoy . container bolte kothay render korbe seta . then sei container er moddhe react element gula render kore root.render function er maddhome . ai function react element ke dom element e convert kore automatically dom e update kore dey jate webpage e show hoy . 
+// akhn React element create kora onk kothin . eta muloto object . tai kaj ta easy korar jonno ashe jsx . jsx holo html er motoii, javascript file e use hoy . amra jevabe html file e html likhi sevabeii html likhbo react file or javascript file e . oi html ke babel convert kore react element object e . and sei react element object ke render kore dom element banay holo ReactDOM . 
+
+
+
+
+
+
+
+
+
