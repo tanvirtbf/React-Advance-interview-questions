@@ -1,81 +1,93 @@
 // const h1 = React.createElement('h1',{className:'heading'},'Hello World')
 
-const h1 = {
-  $$typeof: Symbol.for('react.element'),
-  type: "h1",
-  ref: null,
-  props: {
-    className: "heading",
-    children: "Hello World",
-  },
-};
+// const h1 = {
+//   $$typeof: Symbol.for('react.element'),
+//   type: "h1",
+//   ref: null,
+//   props: {
+//     className: "heading",
+//     children: "Hello World",
+//   },
+// };
 
-const h2 = {
-  $$typeof: Symbol.for('react.element'),
-  type: "h2",
-  ref: null,
-  props: {
-    className: "heading2",
-    children: [
-      {
-        $$typeof: Symbol.for('react.element'),
-        type: "b",
-        ref: null,
-        props: {
-          className: "boldText",
-          children: "Hello bold tag",
-        },
-      },
-      {
-        $$typeof: Symbol.for('react.element'),
-        type: "i",
-        ref: null,
-        props: {
-          className: "iTag",
-          children: [
-            {
-              $$typeof: Symbol.for('react.element'),
-              type: "span",
-              ref: null,
-              props: {
-                className: "spanText",
-                children: "Hello World",
-              },
-            }
-          ],
-        },
-      }
-    ],
-  },
-}
+// const h2 = {
+//   $$typeof: Symbol.for('react.element'),
+//   type: "h2",
+//   ref: null,
+//   props: {
+//     className: "heading2",
+//     children: [
+//       {
+//         $$typeof: Symbol.for('react.element'),
+//         type: "b",
+//         ref: null,
+//         props: {
+//           className: "boldText",
+//           children: "Hello bold tag",
+//         },
+//       },
+//       {
+//         $$typeof: Symbol.for('react.element'),
+//         type: "i",
+//         ref: null,
+//         props: {
+//           className: "iTag",
+//           children: [
+//             {
+//               $$typeof: Symbol.for('react.element'),
+//               type: "span",
+//               ref: null,
+//               props: {
+//                 className: "spanText",
+//                 children: "Hello World",
+//               },
+//             }
+//           ],
+//         },
+//       }
+//     ],
+//   },
+// }
 
-const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(h2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const root = ReactDOM.createRoot(document.querySelector("#root"));
+// root.render({
+//   $$typeof: Symbol.for('react.element'),
+//   type: "h2",
+//   ref: null,
+//   props: {
+//     className: "heading2",
+//     children: [
+//       {
+//         $$typeof: Symbol.for('react.element'),
+//         type: "b",
+//         ref: null,
+//         props: {
+//           className: "boldText",
+//           children: "Hello bold tag",
+//         },
+//       },
+//       {
+//         $$typeof: Symbol.for('react.element'),
+//         type: "i",
+//         ref: null,
+//         props: {
+//           className: "iTag",
+//           children: [
+//             {
+//               $$typeof: Symbol.for('react.element'),
+//               type: "span",
+//               ref: null,
+//               props: {
+//                 className: "spanText",
+//                 children: "Hello World",
+//               },
+//             }
+//           ],
+//         },
+//       }
+//     ],
+//   },
+// });
 
 
 // let totalNumber = 10;
@@ -108,3 +120,40 @@ root.render(h2);
 // const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 // root.render(section)
+
+
+// const container = React.createElement('div',{className:'container', id:'container'}, 
+//   [
+//     React.createElement('section', {key:1} , [
+//       React.createElement('p',{key: 2}, 'The Library for using React')
+//     ])
+//   ]
+// )
+
+// const root = ReactDOM.createRoot(document.querySelector('#root'))
+// root.render(container)
+
+
+
+// Project : 
+// pass a image in img tag 
+
+const container = React.createElement('div', {className:'container'},
+  [
+    React.createElement('h2',{key:1, className:'imageText'},'Image'),
+    React.createElement('img',{key:2, className: 'image', src:'./images/DSC_0061.JPG', alt:'images'}),
+    React.createElement('p',{key:3, className:'para'},'This is Me')
+  ]
+)
+
+const root = ReactDOM.createRoot(document.querySelector('#root'))
+root.render(container)
+
+
+
+
+
+
+
+
+
