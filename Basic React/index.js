@@ -138,30 +138,54 @@
 // Project : 
 // pass a image in img tag 
 
-const container = React.createElement('div', {className:'container'},
+// const container = React.createElement('div', {className:'container'},
+//   [
+//     React.createElement('section',{key: 1, className: 'section1'},
+//     [
+//       React.createElement('h2',{key:1, className:'imageText'},'Image'),
+//       React.createElement('img',{key:2, className: 'image', src:'./images/DSC_0061.JPG', alt:'images'}),
+//       React.createElement('p',{key:3, className:'para',style:{fontSize:'20px'}},'This is Me')
+//     ]),
+//     React.createElement('section',{key:2, className: 'section2'},
+//     [
+//       React.createElement('h2',{key:1, className:'imageText'},'Image'),
+//       React.createElement('img',{key:2, className: 'image', src:'./images/DSC_0061.JPG', alt:'images', style: {width: '100px'}}),
+//       React.createElement('p',{key:3, className:'para',style:{fontSize:'25px'}},'This is Me')
+//     ])
+//   ]
+// )
+
+// const root = ReactDOM.createRoot(document.querySelector('#root'))
+// root.render(container)
+
+
+// project : 
+// create a form without Babel
+
+const container = React.createElement('div',{className:'container',id:'container'},
   [
-    React.createElement('section',{key: 1, className: 'section1'},
-    [
-      React.createElement('h2',{key:1, className:'imageText'},'Image'),
-      React.createElement('img',{key:2, className: 'image', src:'./images/DSC_0061.JPG', alt:'images'}),
-      React.createElement('p',{key:3, className:'para',style:{fontSize:'20px'}},'This is Me')
-    ]),
-    React.createElement('section',{key:2, className: 'section2'},
-    [
-      React.createElement('h2',{key:1, className:'imageText'},'Image'),
-      React.createElement('img',{key:2, className: 'image', src:'./images/DSC_0061.JPG', alt:'images', style: {width: '100px'}}),
-      React.createElement('p',{key:3, className:'para',style:{fontSize:'25px'}},'This is Me')
-    ])
+    React.createElement('form',{key:1, className:'form'},
+      [
+        React.createElement('div',{key: 1, className:'userName'},
+          [
+            React.createElement('label',{key: 1, className:'userNameLabel', htmlFor:'username'}, 'userName'),
+            React.createElement('input',{key:2, className:'input1', id:'username', placeholder:'Enter Your Name'})
+          ]
+        ),
+        React.createElement('div',{key: 2, className:'password'},
+          [
+            React.createElement('label',{key: 1, className:'passwordLabel', htmlFor:'password'},'password'),
+            React.createElement('input',{key:2, className:'input2',id:'password', placeholder:'Enter your Password'})
+          ]
+        ),
+        React.createElement('button',{key:3, className:'button'},'Submit')
+      ]
+    )
   ]
 )
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 root.render(container)
-
-
-
-
-
 
 
 
