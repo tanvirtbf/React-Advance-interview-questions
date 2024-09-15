@@ -199,10 +199,53 @@
 // akhn React element create kora onk kothin . eta muloto object . tai kaj ta easy korar jonno ashe jsx . jsx holo html er motoii, javascript file e use hoy . amra jevabe html file e html likhi sevabeii html likhbo react file or javascript file e . oi html ke babel convert kore react element object e . and sei react element object ke render kore dom element banay holo ReactDOM . 
 
 
+// babel start
+
+// type...
+// babel niye kaj korte holo prothome html er vitor ai index.js file ta jei script tag diye connect kora hoise sei script tag er moddhe type attribute set korte hobe type = "text/babel" . karon by default thake type="text/javascript" . jar karone index.js file jeta index.html er sathe connect hoise seta bujhe je eta ekta javascript file and tar jonno sei script tag seivabeii behave koreche. kintu type="text/babel" dile script tag tokhon index.js ke babel file hishebe dhore babel code gula ke sevabeii manage korbe...
+
+// const h2 = <h2>Hello World</h2>
+
+// ReactDOM.createRoot(document.querySelector('#root')).render(h2)
+
+// const myName = 'Tanvir Ahmed'
+// const h2 = <h2>Hello {myName} </h2>
+
+// ReactDOM.createRoot(document.querySelector('#root')).render(h2)
 
 
+const container = (
+  <div className="container" id="container">
+    <section>
+      <p>The library for web and native user interfaces</p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+        style={{
+          width: 200,
+          backgroundColor: 'teal',
+          borderRadius: 8,
+          padding: 16,
+        }}
+      />
+    </section>
+    <section>
+      <form>
+        <div className="input-group">
+          <label htmlFor="username">Username</label>
+          <input id="username" />
+        </div>
+        <div className="input-group">
+          <label htmlFor="password">Password</label>
+          <input id="password" type="password" />
+        </div>
+      </form>
+    </section>
+  </div>
+)
 
+console.log(container);
 
+const root = ReactDOM.createRoot(document.querySelector('#root'))
 
-
+root.render(container)
 
