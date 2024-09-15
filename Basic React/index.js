@@ -162,32 +162,33 @@
 // project : 
 // create a form without Babel
 
-const container = React.createElement('div',{className:'container',id:'container'},
-  [
-    React.createElement('form',{key:1, className:'form'},
-      [
-        React.createElement('div',{key: 1, className:'userName'},
-          [
-            React.createElement('label',{key: 1, className:'userNameLabel', htmlFor:'username'}, 'userName'),
-            React.createElement('input',{key:2, className:'input1', id:'username', placeholder:'Enter Your Name'})
-          ]
-        ),
-        React.createElement('div',{key: 2, className:'password'},
-          [
-            React.createElement('label',{key: 1, className:'passwordLabel', htmlFor:'password'},'password'),
-            React.createElement('input',{key:2, className:'input2',id:'password', placeholder:'Enter your Password'})
-          ]
-        ),
-        React.createElement('button',{key:3, className:'button'},'Submit')
-      ]
-    )
-  ]
-)
+// const container = React.createElement('div',{className:'container',id:'container'},
+//   [
+//     React.createElement('form',{key:1, className:'form'},
+//       [
+//         React.createElement('div',{key: 1, className:'userName'},
+//           [
+//             React.createElement('label',{key: 1, className:'userNameLabel', htmlFor:'username'}, 'userName'),
+//             React.createElement('input',{key:2, className:'input1', id:'username', placeholder:'Enter Your Name'})
+//           ]
+//         ),
+//         React.createElement('div',{key: 2, className:'password'},
+//           [
+//             React.createElement('label',{key: 1, className:'passwordLabel', htmlFor:'password'},'password'),
+//             React.createElement('input',{key:2, className:'input2',id:'password', placeholder:'Enter your Password'})
+//           ]
+//         ),
+//         React.createElement('button',{key:3, className:'button'},'Submit')
+//       ]
+//     )
+//   ]
+// )
 
-const root = ReactDOM.createRoot(document.querySelector('#root'))
-root.render(container)
-
-
+// const root = ReactDOM.createRoot(document.querySelector('#root'))
+// root.render(container)
 
 
 
+// Babel start 
+// html er moto dekhte jei code gula react component e use hoy egula ke React element e convert korar jonno use hoy Babel . 
+// tar mane jsx code ke react element e convert kore babel 
